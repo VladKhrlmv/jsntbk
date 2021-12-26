@@ -2,11 +2,20 @@
   "name": "cli",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc --watch --preserveWatchOutput"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "all": "^0.0.0",
+    "commander": "^8.3.0",
+    "local-api": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.5",
+    "typescript": "^4.5.4"
+  }
 }
