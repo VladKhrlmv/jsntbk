@@ -1,15 +1,16 @@
 {
-  "name": "local-api",
+  "name": "@jsntbk/local-api",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "tsc",
     "start": "tsc --watch --preserveWatchOutput"
   },
   "keywords": [],
   "author": "",
+  "publishConfig": {"access": "public"},
   "license": "ISC",
   "devDependencies": {
     "@types/cors": "^2.8.12",
@@ -21,6 +22,9 @@
     "cors": "^2.8.5",
     "express": "^4.17.2",
     "http-proxy-middleware": "^2.0.1",
-    "local-client": "^0.1.0"
-  }
+    "@jsntbk/local-client": "^0.1.0"
+  },
+  "files": [
+    "dist"
+  ]
 }

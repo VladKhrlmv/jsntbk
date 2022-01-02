@@ -1,21 +1,30 @@
 {
-  "name": "cli",
+  "name": "jsntbk",
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "esbuild src/index.ts --platform=node --outfile=dist/index.js --bundle --minify --define:process.env.NODE_ENV=\\\"production\\\"",
     "start": "tsc --watch --preserveWatchOutput"
   },
+  "bin": "dist/index.js",
   "keywords": [],
   "author": "",
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "ISC",
   "dependencies": {
-    "all": "^0.0.0",
-    "commander": "^8.3.0",
-    "local-api": "^1.0.0"
+    "@jsntbk/local-client": "^1.0.0"
   },
   "devDependencies": {
+    "@jsntbk/local-api": "^1.0.0",
+    "all": "^0.0.0",
+    "commander": "^8.3.0",
     "@types/node": "^17.0.5",
+    "esbuild": "0.8.26",
     "typescript": "^4.5.4"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
